@@ -1,4 +1,5 @@
 import React from 'react';
+import img from './assets/p3.jpg';
 import { 
   Github, 
   Linkedin, 
@@ -131,7 +132,7 @@ const Portfolio = () => {
             </div>
             <div className="flex items-center justify-center">
             <div className="flex justify-center">
-  <img src="src\assets\p3.jpg" alt="Profile" className="rounded" style={{ width: '450px', height: '450px' }} />
+  <img src={img} alt="Profile" className="rounded" style={{ width: '450px', height: '450px' }} />
 </div>
             </div>
           </div>
