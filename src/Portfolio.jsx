@@ -1,5 +1,6 @@
 import React from 'react';
 import img from './assets/p3.jpg';
+import resume from './assets/resume.pdf';
 import { 
   Github, 
   Linkedin, 
@@ -9,7 +10,8 @@ import {
   Trophy,
   Cpu,
   Database,
-  Globe
+  Globe,
+  Download
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -53,6 +55,16 @@ const Portfolio = () => {
     }
   ];
 
+  const handleDownloadCV = () => {
+    window.open(resume, '_blank');
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Rutu-Bhanderi-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header/Nav */}
@@ -80,19 +92,28 @@ const Portfolio = () => {
             <p className="text-xl text-gray-400 mb-8">
               Passionate about building innovative applications and solving complex problems
             </p>
-            <div className="flex justify-center space-x-4">
-              <a href="https://github.com/rutubhanderi" target="_blank" rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-700">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href="https://www.linkedin.com/in/rutu-bhanderi-46a68a254" target="_blank" rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-700">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="mailto:rutu.bhanderi.07@gmail.com"
-                className="p-2 rounded-full hover:bg-gray-700">
-                <Mail className="w-6 h-6" />
-              </a>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex justify-center space-x-4">
+                <a href="https://github.com/rutubhanderi" target="_blank" rel="noopener noreferrer"
+                  className="p-2 rounded-full hover:bg-gray-700">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a href="https://www.linkedin.com/in/rutu-bhanderi-46a68a254" target="_blank" rel="noopener noreferrer"
+                  className="p-2 rounded-full hover:bg-gray-700">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="mailto:rutu.bhanderi.07@gmail.com"
+                  className="p-2 rounded-full hover:bg-gray-700">
+                  <Mail className="w-6 h-6" />
+                </a>
+              </div>
+              <button
+                onClick={handleDownloadCV}
+                className="flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download CV
+              </button>
             </div>
           </div>
         </div>
