@@ -1,5 +1,5 @@
-import React from 'react';
 import img from './assets/p3.jpg';
+import cert from './assets/cert.png';
 import resume from './assets/resume.pdf';
 import { 
   Github, 
@@ -9,8 +9,7 @@ import {
   BookOpen, 
   Trophy,
   Cpu,
-  Database,
-  Globe,
+  
   Download
 } from 'lucide-react';
 
@@ -247,27 +246,37 @@ const Portfolio = () => {
         </div>
       </div>
            {/* Achievements Section */}
-<div id="achievements" className="py-16 bg-gray-800">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-gray-200 mb-8 flex items-center">
-      <Trophy className="mr-2" />
-      Achievements
-    </h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {/* Achievement Item */}
-      <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-        <p className="text-gray-300 font-semibold">Google Cloud Engineering Certification</p>
-        <p className="text-gray-400 text-sm"> Enhancing skills in cloud infrastructure and solutions.</p>
-      </div>
-      
-      {/* Achievement Item */}
-      <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-        <p className="text-gray-300 font-semibold"> Research Paper</p>
-        <p className="text-gray-400 text-sm">Published paper titled "Efficient Illumination: Arduino-Based Street Light Automation for Energy Savings" at ICETCI, Hyderabad, 2024.</p>
+           <div id="achievements" className="py-16 bg-gray-800">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-gray-200 mb-8 flex items-center">
+          <Trophy className="mr-2 w-8 h-8" />
+          Achievements
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Achievement Item - Cloud Certification */}
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <p className="text-gray-300 font-semibold mb-2">Google Cloud Engineering Certification</p>
+            <p className="text-gray-400 text-sm mb-4">Enhancing skills in cloud infrastructure and solutions.</p>
+            <img 
+              src={cert}
+              alt="Google Cloud Engineering Certification" 
+              className="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Achievement Item - Research Paper */}
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <p className="text-gray-300 font-semibold mb-2">Research Paper</p>
+            <p className="text-gray-400 text-sm mb-4">Published paper titled Efficient Illumination: Arduino-Based Street Light Automation for Energy Savings at ICETCI, Hyderabad, 2024.</p>
+            {/* <img 
+              src="/api/placeholder/300/200" 
+              alt="Research Paper Publication Certificate" 
+              className="w-full h-48 object-cover rounded-lg"
+            /> */}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
       {/* Contact Section */}
       <div id="contact" className="py-16 bg-gray-800">
