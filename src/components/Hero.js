@@ -91,7 +91,7 @@ const Hero = () => {
           <div className="mt-8">
             <div className="flex justify-center space-x-4">
               <a
-                href="https://linkedin.com/in/rutu-bhanderi/"
+                href="https://www.linkedin.com/in/rutu-bhanderi-46a68a254/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-muted hover:text-dark-accent transition-colors"
@@ -140,7 +140,7 @@ const Hero = () => {
                 </svg>
               </a>
               <a
-                href="https://www.credly.com"
+                href="https://www.credly.com/users/rutu-bhanderi.e61e3911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-muted hover:text-dark-accent transition-colors"
